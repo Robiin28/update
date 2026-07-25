@@ -1,0 +1,108 @@
+[
+  {
+    "id": "1",
+    "company": "Kifiya Financial Technology",
+    "role": "Mid-Level Backend Developer, IDD Team",
+    "location": "Addis Ababa, Ethiopia",
+    "startDate": "May 2026",
+    "endDate": "Present",
+    "logoUrl": "https://logo.clearbit.com/kifiya.com",
+    "logoFallback": "KF",
+    "accentColor": "#DE6B24",
+    "description": "Sole developer on Kifiya's production loan platform since the lead developer's departure, owning backend services, frontend, and service architecture end to end while continuing senior platform administration duties on the MCP team.",
+    "technologies": [
+      "Go (Golang)", "Node.js", "Kafka", "Redis", "PostgreSQL",
+      "Microservices Architecture", "Event-Driven Systems", "Next.js"
+    ],
+    "achievements": [
+      "Sole developer on the production loan platform since the lead developer's departure in May 2026, owning backend services, frontend, and service architecture end to end",
+      "Designed and built microservices including an activity log service and a notification service, defining service boundaries, event flow, and integration with core platform services",
+      "Work across Go, Node.js, Kafka, Redis, and PostgreSQL in a distributed, event-driven microservice architecture",
+      "Deliver new-version development and platform enhancements while maintaining the running system, holding direct responsibility for uptime, data integrity, and release quality"
+    ],
+    "order": 1
+  },
+  {
+    "id": "2",
+    "company": "Kifiya Financial Technology",
+    "role": "Senior Platform Administrator (Senior Associate), MCP Team",
+    "location": "Addis Ababa, Ethiopia",
+    "startDate": "Jan 2026",
+    "endDate": "Present",
+    "logoUrl": "https://logo.clearbit.com/kifiya.com",
+    "logoFallback": "KF",
+    "accentColor": "#EEAF30",
+    "description": "Own production operations for a fintech platform enabling over 11B ETB in loan disbursement across banks, NGOs, and financial institutions, acting as both developer and system interpreter for client and stakeholder requirements.",
+    "technologies": [
+      "Platform Administration", "System Monitoring", "Incident Handling",
+      "PostgreSQL", "Data Integrity", "Stakeholder Management"
+    ],
+    "achievements": [
+      "Own production platform operations including system monitoring, incident handling, database operations, and continuous availability of financial workflows",
+      "Support loan processing workflows across multiple banks, NGOs, and financial institutions on a platform enabling over 11B in loan disbursement",
+      "Hold direct responsibility for data operations across large-scale loan and financial datasets, ensuring integrity, consistency, and correct handling in production",
+      "Act as both developer and system interpreter, translating client and stakeholder requirements into platform design and technical implementation"
+    ],
+    "order": 2
+  },
+  {
+    "id": "3",
+    "company": "Elisoft Technology",
+    "role": "Senior Full Stack Developer (Remote)",
+    "location": "Remote",
+    "startDate": "Feb 2023",
+    "endDate": "Apr 2026",
+    "logoUrl": "https://logo.clearbit.com/elisofttech.com",
+    "logoFallback": "ES",
+    "accentColor": "#2D6CDF",
+    "description": "Progressed from junior to senior full stack engineer over three years, building and maintaining ERP modules and production web applications remotely alongside university studies.",
+    "technologies": [
+      "Laravel (PHP)", "Filament Admin Panel", "Node.js", "MySQL",
+      "PostgreSQL", "REST APIs", "Database Design"
+    ],
+    "achievements": [
+      "Joined as a junior full stack engineer and progressed to senior-level responsibilities through continuous delivery across production projects",
+      "Built and maintained full stack applications across frontend and backend systems, contributing to database design, API development, and system optimization in production environments",
+      "Worked extensively on ERP platform development, delivering Inventory, HR, and core business workflow modules, including integration with external systems such as POS"
+    ],
+    "order": 3
+  },
+  {
+    "id": "4",
+    "company": "ESIG Ethiopia Sugar Company",
+    "role": "Data Analyst & Junior ERP Consultant",
+    "location": "Ethiopia",
+    "startDate": "Jul 2025",
+    "endDate": "Jan 2026",
+    "logoFallback": "ES",
+    "accentColor": "#4E8E89",
+    "description": "Bridged development teams and factory stakeholders, translating real operational workflows into structured ERP requirements and clean, integration-ready data.",
+    "technologies": [
+      "Data Analysis", "Data Cleaning", "Requirement Elicitation",
+      "ERP Implementation", "Excel"
+    ],
+    "achievements": [
+      "Bridged development teams, stakeholders, and consultancy representatives to translate business processes into structured technical specifications for developers",
+      "Conducted requirement elicitation and on-site operational analysis, mapping real factory workflows into ERP system requirements",
+      "Analyzed, cleaned, and structured operational and business data to ensure readiness for ERP integration, reporting, and system configuration"
+    ],
+    "order": 4
+  },
+  {
+    "id": "5",
+    "company": "EagleLion System Technology",
+    "role": "Software Developer Intern",
+    "location": "Ethiopia",
+    "startDate": "Mar 2024",
+    "endDate": "Sep 2024",
+    "logoFallback": "EL",
+    "accentColor": "#B36A34",
+    "description": "Contributed to a task management system across frontend and backend as part of an Agile engineering team, building foundational practices in clean code and collaborative delivery.",
+    "technologies": ["Agile Delivery", "Version Control", "Frontend", "Backend"],
+    "achievements": [
+      "Contributed to the development of a task management system, working across frontend and backend alongside the engineering team",
+      "Worked within Agile delivery including sprint planning, standups, and code reviews, building practical experience in clean code, version control, and collaborative development"
+    ],
+    "order": 5
+  }
+]

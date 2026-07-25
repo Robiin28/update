@@ -1,0 +1,26 @@
+ ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.
+Failed to compile.
+
+./app/layout.tsx:3:8
+Type error: Cannot find module or type declarations for side-effect import of './globals.css'.
+
+[0m [90m 1 |[39m [36mimport[39m type { [33mMetadata[39m } [36mfrom[39m [32m"next"[39m[33m;[39m[0m
+[0m [90m 2 |[39m [36mimport[39m { [33mInter[39m } [36mfrom[39m [32m"next/font/google"[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [32m"./globals.css"[39m[33m;[39m[0m
+[0m [90m   |[39m        [31m[1m^[22m[39m[0m
+[0m [90m 4 |[39m [36mimport[39m { [33mThemeProvider[39m } [36mfrom[39m [32m"./providers/ThemeProvider"[39m[33m;[39m[0m
+[0m [90m 5 |[39m [36mimport[39m { siteConfig } [36mfrom[39m [32m"./lib/siteConfig"[39m[33m;[39m[0m
+[0m [90m 6 |[39m[0m
+Next.js build worker exited with code: 1 and signal: null
+
+---
+
+> update-portifolio@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...

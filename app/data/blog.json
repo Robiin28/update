@@ -1,0 +1,13 @@
+[
+  {
+    "id": "1",
+    "title": "Optimizing Next.js Applications",
+    "slug": "optimizing-nextjs",
+    "excerpt": "Learn how to improve the performance of your Next.js applications.",
+    "content": "Full content goes here...",
+    "publishedAt": "2024-02-15",
+    "tags": ["Next.js", "Performance", "React"],
+    "readTimeMinutes": 5,
+    "coverImage": "/blog/nextjs-perf.jpg"
+  }
+]

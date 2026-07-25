@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "title": "Fintech Loan Management Platform",
+    "slug": "fintech-loan-platform",
+    "description": "Large-scale, production loan management platform processing high-volume loan and participant data across multiple financial institutions, supporting over 11B ETB in disbursement. Built backend services and APIs for loan lifecycle workflows, plus activity log and notification microservices, and improved reliability through architectural refinement of live services.",
+    "category": "Fintech",
+    "technologies": ["Go", "Node.js", "Next.js", "Microservices", "Kafka", "Redis", "PostgreSQL", "AWS", "CI/CD", "REST APIs"],
+    "imageUrl": "",
+    "featured": true,
+    "dateCompleted": "2026-05-01",
+    "order": 1
+  },
+  {
+    "id": "2",
+    "title": "ERP System: HR, Finance & Inventory Modules",
+    "slug": "erp-hr-finance-inventory",
+    "description": "Designed and delivered core ERP modules covering HR, finance, and inventory operations, including backend logic, database structures, and API integrations for workflow automation — including integration with external systems such as POS.",
+    "category": "ERP",
+    "technologies": ["Laravel", "Filament", "CodeIgniter", "Node.js", "MySQL", "PostgreSQL", "REST APIs", "Database Design"],
+    "imageUrl": "",
+    "featured": true,
+    "dateCompleted": "2026-04-01",
+    "order": 2
+  },
+  {
+    "id": "3",
+    "title": "AI-Powered CV Generator",
+    "slug": "ai-cv-generator",
+    "description": "Personal project: an AI-assisted resume/CV builder that generates tailored, structured resumes — built to explore practical LLM-integrated tooling outside of client work.",
+    "category": "AI/ML",
+    "technologies": ["Next.js", "TypeScript", "AI/LLM Integration"],
+    "imageUrl": "",
+    "featured": true,
+    "dateCompleted": "2026-01-01",
+    "order": 3
+  },
+  {
+    "id": "4",
+    "title": "RAG-Based Experiments",
+    "slug": "rag-experiments",
+    "description": "Retrieval-Augmented Generation experiments combining vector search with LLMs for context-aware question answering — used to deepen practical, agentic AI engineering skills.",
+    "category": "AI/ML",
+    "technologies": ["Python", "RAG", "Vector Search", "LLM"],
+    "imageUrl": "",
+    "featured": true,
+    "dateCompleted": "2025-11-01",
+    "order": 4
+  },
+  {
+    "id": "5",
+    "title": "E-Learning Platform",
+    "slug": "e-learning-platform",
+    "description": "Full stack e-learning platform supporting course delivery and student interaction, built to practice end-to-end product development outside of client work.",
+    "category": "Web",
+    "technologies": ["React", "Node.js", "Full Stack"],
+    "imageUrl": "",
+    "featured": true,
+    "dateCompleted": "2025-06-01",
+    "order": 5
+  },
+  {
+    "id": "6",
+    "title": "Telegram Bot Automation",
+    "slug": "telegram-bot-automation",
+    "description": "Automation bot built on the Telegram Bot API to streamline repetitive workflows and notifications.",
+    "category": "Automation",
+    "technologies": ["Node.js", "Telegram Bot API", "Automation"],
+    "imageUrl": "",
+    "featured": true,
+    "dateCompleted": "2024-09-01",
+    "order": 6
+  },
+  {
+    "id": "7",
+    "title": "University News Feed & Recommendation System",
+    "slug": "university-news-recommendation",
+    "description": "Final year project: a personalized recommendation system paired with a university news feed, applying data-driven personalization techniques end to end.",
+    "category": "Data",
+    "technologies": ["Recommendation Systems", "Data Analysis", "Full Stack"],
+    "imageUrl": "",
+    "featured": true,
+    "dateCompleted": "2025-03-01",
+    "order": 7
+  }
+]

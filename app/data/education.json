@@ -1,0 +1,26 @@
+{
+  "education": [
+    {
+      "degree": "MSc, Data Analysis",
+      "institution": "Addis Ababa University",
+      "period": "Jan 2026 – 2029 (ongoing)"
+    },
+    {
+      "degree": "BSc, Software Engineering",
+      "institution": "Arba Minch University, Ethiopia",
+      "period": "2021 – 2025"
+    }
+  ],
+  "volunteering": [
+    {
+      "role": "Charity Leadership & First Aid Volunteer",
+      "organization": "AMU Charity",
+      "period": "2022 – 2025",
+      "note": "Certified for leadership in outreach programs focused on education and social impact."
+    }
+  ],
+  "languages": [
+    { "name": "Amharic", "level": "Native" },
+    { "name": "English", "level": "Professional working proficiency" }
+  ]
+}
