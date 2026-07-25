@@ -84,7 +84,7 @@ export function DataLab() {
     <section id="datalab" className="py-32 relative overflow-hidden bg-background">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-220px" }}>
             <span className="flex items-center gap-2 text-primary font-bold text-sm tracking-widest uppercase mb-4">
               <Database className="w-4 h-4" />
               Insights Gallery

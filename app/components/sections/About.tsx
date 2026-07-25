@@ -12,7 +12,7 @@ function SkillGroup({ category }: { category: SkillCategory }) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-220px" }}
       className="bg-white/80 dark:bg-card/60 backdrop-blur-xl border border-black/5 dark:border-white/10 shadow-2xl dark:shadow-[0_4px_24px_rgba(0,0,0,0.1)] rounded-2xl p-6"
     >
       <div className="flex items-center gap-2 mb-6">
@@ -33,7 +33,7 @@ function SkillGroup({ category }: { category: SkillCategory }) {
                 className="skill-fill"
                 initial={{ width: 0 }}
                 whileInView={{ width: `${skill.level}%` }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-220px" }}
                 transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
               />
             </div>
@@ -55,7 +55,7 @@ function ExperienceCard({ exp, index }: { exp: Experience; index: number }) {
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-220px" }}
       transition={{ duration: 0.55, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
       className="relative"
     >
@@ -310,7 +310,7 @@ export function About({
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-220px" }}
           className="flex flex-col items-center text-center gap-4 mb-16"
           id="experience"
         >
@@ -346,7 +346,7 @@ export function About({
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-220px" }}
               className="space-y-6"
             >
               <div className="bg-white dark:bg-card/60 backdrop-blur-xl shadow-2xl dark:shadow-none rounded-3xl p-6 md:p-8 gradient-border border border-black/5 dark:border-transparent">
@@ -385,7 +385,7 @@ export function About({
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-220px" }}
           id="skills"
           className="flex flex-col items-center text-center gap-4 mb-16"
         >
@@ -404,7 +404,7 @@ export function About({
               key={cat.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-220px" }}
               transition={{ delay: i * 0.1 }}
             >
               <SkillGroup category={cat} />

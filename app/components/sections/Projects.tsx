@@ -35,7 +35,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     <motion.article
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "-200px" }}
       transition={{ duration: 0.6, delay: (index % 3) * 0.12, ease: [0.16, 1, 0.3, 1] }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
@@ -136,7 +136,7 @@ export function Projects({ initialProjects }: { initialProjects: Project[] }) {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-160px" }}
           className="mb-16"
         >
           <p className="text-xs font-bold tracking-[0.3em] uppercase mb-4" style={{ color: "rgb(var(--primary))" }}>

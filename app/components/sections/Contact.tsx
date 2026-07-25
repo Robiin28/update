@@ -42,7 +42,7 @@ export function Contact() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-220px" }}
           className="flex flex-col items-center text-center gap-4 mb-16"
         >
           <span className="section-label">
@@ -63,7 +63,7 @@ export function Contact() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-220px" }}
             className="lg:col-span-2 flex flex-col gap-5"
           >
             {[
@@ -113,7 +113,7 @@ export function Contact() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-220px" }}
             className="lg:col-span-3"
           >
             <div className="glass-card rounded-3xl p-8 gradient-border">

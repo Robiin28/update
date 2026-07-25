@@ -35,7 +35,7 @@ export function MonitorHub() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-220px" }}
           className="mb-16 md:flex md:items-end justify-between"
         >
           <div>
