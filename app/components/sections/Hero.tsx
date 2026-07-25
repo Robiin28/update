@@ -9,8 +9,13 @@ import {
   useScroll,
   AnimatePresence,
 } from "framer-motion";
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import { siteConfig } from "../../lib/siteConfig";
+
+const NetworkScene = dynamic(
+  () => import("../three/NetworkScene").then((mod) => mod.NetworkScene),
+  { ssr: false }
+);
 
 /* ─────────────────────────────────────────────────────────────
    FLOATING DATA NODES
@@ -148,15 +153,10 @@ export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#080605] selection:bg-[#DE6B24]/30 selection:text-white">
 
-      {/* ───── LAYER 0: PARALLAX BACKDROP ───── */}
+      {/* ───── LAYER 0: PARALLAX BACKDROP — 3D MICROSERVICES NETWORK ───── */}
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY, scale: bgScale }}>
-        <Image
-          src="https://picsum.photos/id/116/1600/900" 
-          alt="Dramatic mountain range"
-          fill
-          className="object-cover"
-          priority
-        />
+        <div className="absolute inset-0 bg-[#080605]" />
+        <NetworkScene />
         <div className="absolute inset-0 bg-gradient-to-r from-[#080605] via-[#080605]/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#080605] via-transparent to-transparent opacity-80" />
       </motion.div>
