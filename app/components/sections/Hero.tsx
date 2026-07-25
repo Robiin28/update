@@ -167,11 +167,11 @@ export function Hero() {
       </div>
 
       {/* ───── LAYER 2: CONTENT ───── */}
-      <div className="relative z-30 min-h-screen flex flex-col items-center justify-center py-32 md:py-0">
+      <div className="relative z-30 min-h-screen flex flex-col items-center justify-center pt-32 pb-16 md:pt-40 md:pb-16">
         <div className="w-full container mx-auto px-6 sm:px-10 lg:px-20 flex flex-col items-center justify-center text-center lg:text-left lg:flex-row lg:justify-between h-full">
           
           {/* LEFT: Identity Panel */}
-          <div className="w-full lg:w-3/5 text-center lg:text-left flex flex-col items-center lg:items-start gap-8 lg:gap-10">
+          <div className="w-full lg:w-3/5 text-center lg:text-left flex flex-col items-center lg:items-start gap-6 lg:gap-8">
             
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -188,7 +188,7 @@ export function Hero() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h1 className="font-display font-black tracking-tighter leading-[0.9] text-white" style={{ fontSize: "clamp(3.5rem, 15vw, 10rem)" }}>
+              <h1 className="font-display font-black tracking-tighter leading-[0.95] text-white" style={{ fontSize: "clamp(2.25rem, 7.5vw, 5.25rem)" }}>
                 <span className="block italic opacity-40 text-xl md:text-4xl mb-2 md:mb-4 font-normal tracking-wide">I am</span>
                 <span className="block">{siteConfig.author.name.split(" ")[0]}</span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#EEaf30] to-[#DE6B24]">
