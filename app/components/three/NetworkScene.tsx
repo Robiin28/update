@@ -36,8 +36,28 @@ function buildEdgePositions(nodes: THREE.Vector3[]): Float32Array {
   return new Float32Array(positions);
 }
 
+function useDotTexture(): THREE.Texture {
+  return React.useMemo(() => {
+    const size = 64;
+    const canvas = document.createElement("canvas");
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext("2d")!;
+    const gradient = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+    gradient.addColorStop(0, "rgba(255,255,255,1)");
+    gradient.addColorStop(0.4, "rgba(255,255,255,0.55)");
+    gradient.addColorStop(1, "rgba(255,255,255,0)");
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, size, size);
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.needsUpdate = true;
+    return texture;
+  }, []);
+}
+
 function Network({ count, reduceMotion }: { count: number; reduceMotion: boolean }) {
   const groupRef = React.useRef<THREE.Group>(null);
+  const dotTexture = useDotTexture();
 
   const nodes = React.useMemo(() => generateNodes(count), [count]);
 
@@ -106,7 +126,8 @@ function Network({ count, reduceMotion }: { count: number; reduceMotion: boolean
           />
         </bufferGeometry>
         <pointsMaterial
-          size={0.22}
+          map={dotTexture}
+          size={0.32}
           vertexColors
           transparent
           opacity={1}
