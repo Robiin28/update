@@ -157,8 +157,8 @@ export function Hero() {
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY, scale: bgScale }}>
         <div className="absolute inset-0 bg-[#080605]" />
         <NetworkScene />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#080605] via-[#080605]/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080605] via-transparent to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#080605] via-[#080605]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080605] via-transparent to-transparent opacity-60" />
       </motion.div>
 
       {/* ───── LAYER 1: DATA NODES ───── */}

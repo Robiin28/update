@@ -5,7 +5,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 const ACCENTS = ["#DE6B24", "#EEAF30", "#4E8E89"];
-const CONNECT_DISTANCE = 3.4;
+const CONNECT_DISTANCE = 4.6;
 
 function generateNodes(count: number): THREE.Vector3[] {
   const nodes: THREE.Vector3[] = [];
@@ -15,8 +15,8 @@ function generateNodes(count: number): THREE.Vector3[] {
     const phi = Math.acos(2 * Math.random() - 1);
     nodes.push(
       new THREE.Vector3(
-        radius * Math.sin(phi) * Math.cos(theta),
-        radius * Math.sin(phi) * Math.sin(theta) * 0.55,
+        radius * Math.sin(phi) * Math.cos(theta) * 1.7, // stretch wide across the hero
+        radius * Math.sin(phi) * Math.sin(theta) * 0.6,
         radius * Math.cos(phi)
       )
     );
@@ -81,7 +81,13 @@ function Network({ count, reduceMotion }: { count: number; reduceMotion: boolean
             itemSize={3}
           />
         </bufferGeometry>
-        <lineBasicMaterial color="#DE6B24" transparent opacity={0.14} />
+        <lineBasicMaterial
+          color="#EEAF30"
+          transparent
+          opacity={0.4}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
       </lineSegments>
 
       <points>
@@ -99,7 +105,15 @@ function Network({ count, reduceMotion }: { count: number; reduceMotion: boolean
             itemSize={3}
           />
         </bufferGeometry>
-        <pointsMaterial size={0.11} vertexColors transparent opacity={0.9} sizeAttenuation />
+        <pointsMaterial
+          size={0.22}
+          vertexColors
+          transparent
+          opacity={1}
+          sizeAttenuation
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
       </points>
     </group>
   );
@@ -121,11 +135,11 @@ class CanvasErrorBoundary extends React.Component<{ children: React.ReactNode },
 
 export function NetworkScene() {
   const [ready, setReady] = React.useState(false);
-  const [count, setCount] = React.useState(70);
+  const [count, setCount] = React.useState(110);
   const [reduceMotion, setReduceMotion] = React.useState(false);
 
   React.useEffect(() => {
-    setCount(window.innerWidth < 768 ? 34 : 70);
+    setCount(window.innerWidth < 768 ? 55 : 110);
     setReduceMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
     setReady(true);
   }, []);
@@ -136,7 +150,7 @@ export function NetworkScene() {
     <CanvasErrorBoundary>
       <Canvas
         className="!absolute inset-0"
-        camera={{ position: [0, 0, 11], fov: 45 }}
+        camera={{ position: [0, 0, 10], fov: 55 }}
         gl={{ antialias: true, alpha: true, powerPreference: "low-power" }}
         dpr={[1, 1.5]}
       >
