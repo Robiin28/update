@@ -48,17 +48,19 @@
     "id": "3",
     "title": "AI-Powered CV Generator",
     "slug": "ai-cv-generator",
-    "description": "Personal project: an AI-assisted resume/CV builder that generates tailored, structured resumes — built to explore practical LLM-integrated tooling outside of client work.",
+    "description": "Personal project: an AI-assisted resume/CV builder that generates tailored, structured resumes built to explore practical LLM-integrated tooling outside of client work. which include mobile app",
     "category": "AI/ML",
     "technologies": [
       "Next.js",
       "TypeScript",
-      "AI/LLM Integration"
+      "AI/LLM Integration",
+      "Flutter"
     ],
     "imageUrl": "/projects/ai-cv-generator.svg",
     "featured": true,
     "dateCompleted": "2026-01-01",
-    "order": 3
+    "order": 3,
+    "githubUrl": "https://github.com/Robiin28/CV-generator"
   },
   {
     "id": "4",
