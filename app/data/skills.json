@@ -3,47 +3,156 @@
     {
       "name": "Backend & Distributed Systems",
       "skills": [
-        { "name": "Go (Golang)",                 "level": 88, "icon": "go" },
-        { "name": "Node.js",                      "level": 85, "icon": "nodejs" },
-        { "name": "Microservices Architecture",   "level": 85, "icon": "microservices" },
-        { "name": "Kafka",                        "level": 78, "icon": "kafka" },
-        { "name": "Redis",                        "level": 80, "icon": "redis" },
-        { "name": "REST API Design & Integration","level": 90, "icon": "api" }
+        {
+          "name": "NodeJs",
+          "level": 85,
+          "icon": "go"
+        },
+        {
+          "name": "Go (Golang)",
+          "level": 78,
+          "icon": "nodejs"
+        },
+        {
+          "name": "Microservices Architecture",
+          "level": 86,
+          "icon": "microservices"
+        },
+        {
+          "name": "Kafka",
+          "level": 78,
+          "icon": "kafka"
+        },
+        {
+          "name": "Redis",
+          "level": 80,
+          "icon": "redis"
+        },
+        {
+          "name": "REST API Design & Integration",
+          "level": 90,
+          "icon": "api"
+        },
+        {
+          "name": "Laravel",
+          "level": 79,
+          "icon": ""
+        }
       ]
     },
     {
       "name": "Databases",
       "skills": [
-        { "name": "PostgreSQL",         "level": 85, "icon": "postgres" },
-        { "name": "MySQL",              "level": 80, "icon": "mysql" },
-        { "name": "Database Design",    "level": 82, "icon": "database" },
-        { "name": "Query Optimization", "level": 75, "icon": "database" }
+        {
+          "name": "PostgreSQL",
+          "level": 85,
+          "icon": "postgres"
+        },
+        {
+          "name": "MySQL",
+          "level": 80,
+          "icon": "mysql"
+        },
+        {
+          "name": "Database Design",
+          "level": 82,
+          "icon": "database"
+        },
+        {
+          "name": "Query Optimization",
+          "level": 75,
+          "icon": "database"
+        },
+        {
+          "name": "MongoDB",
+          "level": 82,
+          "icon": ""
+        }
       ]
     },
     {
       "name": "Platform & Infrastructure",
       "skills": [
-        { "name": "Platform Administration",           "level": 85, "icon": "platform" },
-        { "name": "System Monitoring & Incident Handling", "level": 85, "icon": "monitoring" },
-        { "name": "CI/CD",                              "level": 75, "icon": "cicd" },
-        { "name": "AWS",                                "level": 70, "icon": "aws" }
+        {
+          "name": "Platform Administration",
+          "level": 85,
+          "icon": "platform"
+        },
+        {
+          "name": "System Monitoring & Incident Handling",
+          "level": 85,
+          "icon": "monitoring"
+        },
+        {
+          "name": "CI/CD",
+          "level": 79,
+          "icon": "cicd"
+        },
+        {
+          "name": "AWS",
+          "level": 73,
+          "icon": "aws"
+        }
       ]
     },
     {
-      "name": "Frontend",
+      "name": "Frontend & mobile app",
       "skills": [
-        { "name": "Next.js",           "level": 85, "icon": "nextjs" },
-        { "name": "React",             "level": 82, "icon": "react" },
-        { "name": "Full Stack Delivery","level": 80, "icon": "fullstack" }
+        {
+          "name": "Next.js",
+          "level": 85,
+          "icon": "nextjs"
+        },
+        {
+          "name": "React",
+          "level": 83,
+          "icon": "react"
+        },
+        {
+          "name": "Full Stack Delivery",
+          "level": 80,
+          "icon": "fullstack"
+        },
+        {
+          "name": "Three.Js",
+          "level": 65,
+          "icon": ""
+        },
+        {
+          "name": "Flutter & React native",
+          "level": 71,
+          "icon": ""
+        }
       ]
     },
     {
       "name": "Data & Domain",
       "skills": [
-        { "name": "Data Analysis & Processing",       "level": 80, "icon": "data" },
-        { "name": "Reporting (Metabase, Power BI, Excel)", "level": 78, "icon": "reporting" },
-        { "name": "ERP Implementation",                "level": 82, "icon": "erp" },
-        { "name": "Fintech Domain Experience",          "level": 85, "icon": "fintech" }
+        {
+          "name": "Data Analysis & Processing",
+          "level": 80,
+          "icon": "data"
+        },
+        {
+          "name": "Reporting (Metabase, Power BI, Excel)",
+          "level": 78,
+          "icon": "reporting"
+        },
+        {
+          "name": "ERP Implementation",
+          "level": 82,
+          "icon": "erp"
+        },
+        {
+          "name": "Fintech Domain Experience",
+          "level": 85,
+          "icon": "fintech"
+        },
+        {
+          "name": "Data Visualization (metabase,PoweBI,excell)",
+          "level": 83,
+          "icon": ""
+        }
       ]
     }
   ]
