@@ -9,7 +9,7 @@
     "logoUrl": "https://logo.clearbit.com/kifiya.com",
     "logoFallback": "KF",
     "accentColor": "#DE6B24",
-    "description": "developer on Kifiya's production loan platform since the lead developer's departure, owning backend services, frontend, and service architecture end to end while continuing senior platform administration duties on the MCP team.",
+    "description": "Solo developer on Kifiya's production loan platform, owning backend services, frontend, and service architecture end to end while continuing senior platform administration duties on the MCP team.",
     "technologies": [
       "Go (Golang)",
       "Node.js",
