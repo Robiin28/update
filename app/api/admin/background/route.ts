@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getFile, putFile } from "../../../lib/github";
 
+export const dynamic = "force-dynamic";
+
 const PATH = "app/data/education.json";
 
 export async function GET() {

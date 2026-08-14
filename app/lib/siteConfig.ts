@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Robel Hailu",
   title: "Robel Hailu Woldesenebet | Backend & Platform Engineer",
   description: "Backend & Platform Engineer specializing in microservices, distributed systems, and fintech platforms — building with Go, Node.js, Kafka, Redis, and PostgreSQL.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   ogImage: "/og.jpg",
   links: {
     github:   "https://github.com/Robiin28",
