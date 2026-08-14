@@ -3,7 +3,7 @@
   "aboutPortraitUrl": "/profile/aboutportraiturl-1786714441820.png",
   "sentinelPortraitUrl": "/portrait.jpg",
   "resumeUrl": "/resume.pdf",
-  "bio": "I'm a backend and platform engineer who owns problems end to end — from system design to production operations. I currently build and run Kifiya's loan platform solo, working across Go, Node.js, Kafka, and PostgreSQL in event-driven microservice architectures.\n\nI use AI-assisted, agentic engineering workflows for delivery speed while keeping architecture and correctness decisions my own — and I build personal projects on the side, from RAG experiments to a recommendation-driven news feed, to keep deepening my systems thinking.",
+  "bio": "I’m a Backend & Platform Engineer ( Fullstack ) focused on building reliable systems and solving problems end to end, from architecture and backend development to deployment,UI design, infrastructure, and production operations.\n\nAt Kifiya, I work on a large scale loan platform, designing and developing event driven microservices across Go, Node.js, Kafka, and PostgreSQL. My work spans system architecture, service development, data flows, integrations, security, and the operational side of keeping production systems reliable.\n\nI take ownership beyond writing code. I focus on understanding the business problem, designing the right system, implementing it, and making sure it works reliably in production. Outside of work, I build and experiment with personal projects, including RAG systems and recommendation driven applications, to continuously expand my understanding of distributed systems, backend architecture, and modern software engineering.",
   "location": "Addis Ababa",
   "availabilityText": "Open to select opportunities"
 }
