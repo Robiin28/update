@@ -143,7 +143,7 @@ const ROLES = ["Backend & Platform Engineer", "Microservices Architect", "Distri
 /* ─────────────────────────────────────────────────────────────
    MAIN HERO COMPONENT
 ───────────────────────────────────────────────────────────── */
-export function Hero({ yearsExperience }: { yearsExperience: number }) {
+export function Hero({ yearsExperience, resumeUrl }: { yearsExperience: number; resumeUrl: string }) {
   const [roleIdx, setRoleIdx] = React.useState(0);
   const { scrollY } = useScroll();
 
@@ -235,7 +235,7 @@ export function Hero({ yearsExperience }: { yearsExperience: number }) {
                 variant="ghost"
                 onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/resume.pdf";
+                  link.href = resumeUrl;
                   link.download = "Robel-Hailu-Resume.pdf";
                   link.click();
                 }}

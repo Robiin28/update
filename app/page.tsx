@@ -30,7 +30,7 @@ export default async function Home() {
         <AnalyticsCommand />
         <Header />
         <main className="flex-grow">
-          <Hero yearsExperience={profile.yearsExperience} />
+          <Hero yearsExperience={profile.yearsExperience} resumeUrl={profile.resumeUrl} />
           <About experiences={experiences} skills={skillsData.categories} portraitUrl={profile.aboutPortraitUrl} />
           <Background data={background} />
           <MonitorHub />

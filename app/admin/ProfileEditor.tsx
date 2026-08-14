@@ -29,7 +29,11 @@ export function ProfileEditor() {
     setProfile((prev) => prev && { ...prev, ...patch });
   };
 
-  const onUploadImage = async (field: "aboutPortraitUrl" | "sentinelPortraitUrl", file: File) => {
+  const onUploadFile = async (
+    field: "aboutPortraitUrl" | "sentinelPortraitUrl" | "resumeUrl",
+    file: File,
+    label: string
+  ) => {
     setUploadingField(field);
     setStatus({ kind: "idle" });
     try {
@@ -49,7 +53,7 @@ export function ProfileEditor() {
       if (!res.ok) throw new Error(data.error ?? "Upload failed");
 
       update({ [field]: data.path });
-      setStatus({ kind: "success", message: "Image uploaded — click Save & Publish to link it." });
+      setStatus({ kind: "success", message: `${label} uploaded — click Save & Publish to link it.` });
     } catch (err) {
       setStatus({ kind: "error", message: (err as Error).message });
     } finally {
@@ -113,15 +117,69 @@ export function ProfileEditor() {
         label="About Section Portrait"
         value={profile.aboutPortraitUrl}
         uploading={uploadingField === "aboutPortraitUrl"}
-        onUpload={(file) => onUploadImage("aboutPortraitUrl", file)}
+        onUpload={(file) => onUploadFile("aboutPortraitUrl", file, "Portrait")}
       />
 
       <PortraitField
         label="Scroll-Following Portrait (Global Sentinel)"
         value={profile.sentinelPortraitUrl}
         uploading={uploadingField === "sentinelPortraitUrl"}
-        onUpload={(file) => onUploadImage("sentinelPortraitUrl", file)}
+        onUpload={(file) => onUploadFile("sentinelPortraitUrl", file, "Portrait")}
       />
+
+      <FileField
+        label="Resume / CV (PDF)"
+        value={profile.resumeUrl}
+        uploading={uploadingField === "resumeUrl"}
+        accept="application/pdf"
+        onUpload={(file) => onUploadFile("resumeUrl", file, "Resume")}
+      />
+    </div>
+  );
+}
+
+function FileField({
+  label,
+  value,
+  uploading,
+  accept,
+  onUpload,
+}: {
+  label: string;
+  value: string;
+  uploading: boolean;
+  accept: string;
+  onUpload: (file: File) => void;
+}) {
+  return (
+    <div className="glass-card rounded-2xl p-5 space-y-3">
+      <div className="flex items-start gap-4">
+        <div className="flex-1 space-y-2">
+          <Field label={label}>
+            {value ? (
+              <a href={value} target="_blank" rel="noreferrer" className="text-xs text-primary underline break-all">
+                {value}
+              </a>
+            ) : (
+              <p className="text-xs text-muted-foreground">No file set</p>
+            )}
+          </Field>
+          <label className="inline-block text-xs font-semibold text-primary cursor-pointer">
+            {uploading ? "Uploading…" : "Upload New File"}
+            <input
+              type="file"
+              accept={accept}
+              hidden
+              disabled={uploading}
+              onChange={(e) => {
+                const file = e.target.files?.[0];
+                if (file) onUpload(file);
+                e.target.value = "";
+              }}
+            />
+          </label>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 {
   "yearsExperience": 3,
   "aboutPortraitUrl": "https://picsum.photos/id/1015/600/800",
-  "sentinelPortraitUrl": "/portrait.jpg"
+  "sentinelPortraitUrl": "/portrait.jpg",
+  "resumeUrl": "/resume.pdf"
 }
