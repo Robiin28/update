@@ -21,13 +21,23 @@ export function Header() {
   const [isOpen,   setIsOpen]   = React.useState(false);
 
   React.useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 40);
-      if (window.scrollY > 120 && isOpen) setIsOpen(false);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     onScroll(); // Check initial scroll
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close the mobile menu if the user scrolls while it's open — attached
+  // only while open, and never fired synchronously on attach, so opening
+  // the menu after already having scrolled past 120px doesn't instantly
+  // close it again.
+  React.useEffect(() => {
+    if (!isOpen) return;
+    const closeOnScroll = () => {
+      if (window.scrollY > 120) setIsOpen(false);
+    };
+    window.addEventListener("scroll", closeOnScroll);
+    return () => window.removeEventListener("scroll", closeOnScroll);
   }, [isOpen]);
 
   // Close menu when clicking a link

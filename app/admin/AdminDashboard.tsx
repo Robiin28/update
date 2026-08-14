@@ -4,8 +4,11 @@ import * as React from "react";
 import { useRouter } from "next/navigation";
 import { ProjectsEditor } from "./ProjectsEditor";
 import { ExperiencesEditor } from "./ExperiencesEditor";
+import { SkillsEditor } from "./SkillsEditor";
+import { BackgroundEditor } from "./BackgroundEditor";
+import { ProfileEditor } from "./ProfileEditor";
 
-const TABS = ["Projects", "Experience"] as const;
+const TABS = ["Projects", "Experience", "Skills", "Background", "Profile"] as const;
 type Tab = (typeof TABS)[number];
 
 export function AdminDashboard() {
@@ -42,7 +45,11 @@ export function AdminDashboard() {
           ))}
         </div>
 
-        {tab === "Projects" ? <ProjectsEditor /> : <ExperiencesEditor />}
+        {tab === "Projects" && <ProjectsEditor />}
+        {tab === "Experience" && <ExperiencesEditor />}
+        {tab === "Skills" && <SkillsEditor />}
+        {tab === "Background" && <BackgroundEditor />}
+        {tab === "Profile" && <ProfileEditor />}
       </div>
     </div>
   );

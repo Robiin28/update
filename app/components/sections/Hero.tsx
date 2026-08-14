@@ -143,7 +143,7 @@ const ROLES = ["Backend & Platform Engineer", "Microservices Architect", "Distri
 /* ─────────────────────────────────────────────────────────────
    MAIN HERO COMPONENT
 ───────────────────────────────────────────────────────────── */
-export function Hero() {
+export function Hero({ yearsExperience }: { yearsExperience: number }) {
   const [roleIdx, setRoleIdx] = React.useState(0);
   const { scrollY } = useScroll();
 
@@ -253,7 +253,7 @@ export function Hero() {
               className="flex items-center gap-3 pt-8 border-t border-white/10 w-full"
             >
               <div className="group flex flex-col items-center lg:items-start">
-                <p className="font-display text-lg md:text-3xl font-black text-[#DE6B24]"><Counter target={3} suffix="+" /></p>
+                <p className="font-display text-lg md:text-3xl font-black text-[#DE6B24]"><Counter target={yearsExperience} suffix="+" /></p>
                 <p className="text-[7px] md:text-[9px] uppercase tracking-[0.2em] text-white/30 mt-1">Years Experience</p>
               </div>
             </motion.div>

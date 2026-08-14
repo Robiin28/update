@@ -11,15 +11,16 @@ import { ChatBot }  from "./components/ui/ChatBot";
 import { CustomCursor } from "./components/ui/CustomCursor";
 import { AnalyticsCommand } from "./components/ui/AnalyticsCommand";
 import { GlobalSentinel } from "./components/ui/GlobalSentinel";
-import { getFeaturedProjects, getExperiences, getSkills, getBackground } from "./lib/data";
+import { getFeaturedProjects, getExperiences, getSkills, getBackground, getProfile } from "./lib/data";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 
 export default async function Home() {
-  const [projects, experiences, skillsData, background] = await Promise.all([
+  const [projects, experiences, skillsData, background, profile] = await Promise.all([
     getFeaturedProjects(),
     getExperiences(),
     getSkills(),
     getBackground(),
+    getProfile(),
   ]);
 
   return (
@@ -29,15 +30,15 @@ export default async function Home() {
         <AnalyticsCommand />
         <Header />
         <main className="flex-grow">
-          <Hero />
-          <About experiences={experiences} skills={skillsData.categories} />
+          <Hero yearsExperience={profile.yearsExperience} />
+          <About experiences={experiences} skills={skillsData.categories} portraitUrl={profile.aboutPortraitUrl} />
           <Background data={background} />
           <MonitorHub />
           <DataLab />
           <Projects initialProjects={projects} />
           <Contact />
         </main>
-        <GlobalSentinel />
+        <GlobalSentinel portraitUrl={profile.sentinelPortraitUrl} />
         <ChatBot />
         <Footer />
       </div>

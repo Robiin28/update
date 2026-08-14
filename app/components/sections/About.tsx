@@ -33,7 +33,7 @@ function SkillGroup({ category }: { category: SkillCategory }) {
                 className="skill-fill"
                 initial={{ width: 0 }}
                 whileInView={{ width: `${skill.level}%` }}
-                viewport={{ once: false, margin: "-220px" }}
+                viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
               />
             </div>
@@ -226,7 +226,7 @@ function ExperienceCard({ exp, index }: { exp: Experience; index: number }) {
 
 
 /* ── Animated Portrait ──────────────────────────────────── */
-function AnimatedPortrait() {
+function AnimatedPortrait({ portraitUrl }: { portraitUrl: string }) {
   const ref = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -244,7 +244,7 @@ function AnimatedPortrait() {
     ["inset(15% 45% 20% 10% round 40px)", "inset(0% 0% 0% 0% round 24px)"]
   );
   const opacity = useTransform(scrollYProgress, [0, 0.4, 1], [0, 1, 1]);
-  
+
   // A subtle opposite movement for the glass frame to create parallax depth
   const frameX = useTransform(scrollYProgress, [0, 1], [-10, 8]);
   const frameY = useTransform(scrollYProgress, [0, 1], [-5, 12]);
@@ -252,7 +252,7 @@ function AnimatedPortrait() {
 
   return (
     <div ref={ref} className="relative w-full h-[400px] mb-8 flex items-center justify-center max-w-sm mx-auto">
-      
+
       {/* Decorative Parallax Glass Frame */}
       <motion.div
         style={{ x: frameX, y: frameY, rotate: frameRotate, opacity }}
@@ -265,9 +265,10 @@ function AnimatedPortrait() {
         className="relative w-[280px] h-[360px] md:w-[320px] md:h-[400px] z-10 shadow-2xl"
       >
         <Image
-          src="https://picsum.photos/id/1015/600/800"
+          src={portraitUrl}
           alt="My portrait"
           fill
+          unoptimized
           className="object-cover rounded-3xl"
         />
 
@@ -296,9 +297,11 @@ function AnimatedPortrait() {
 export function About({
   experiences,
   skills,
+  portraitUrl,
 }: {
   experiences: Experience[];
   skills: SkillCategory[];
+  portraitUrl: string;
 }) {
   return (
     <section id="about" className="py-32 relative overflow-hidden">
@@ -340,7 +343,7 @@ export function About({
           {/* Right Column: Portrait + About blurb */}
           <div className="flex flex-col gap-6 md:gap-8 order-1 lg:order-2">
             <div className="scale-90 md:scale-100">
-              <AnimatedPortrait />
+              <AnimatedPortrait portraitUrl={portraitUrl} />
             </div>
 
             <motion.div

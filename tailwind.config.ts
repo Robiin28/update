@@ -14,8 +14,8 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Outfit", "Inter", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-outfit)", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       colors: {
         background: "rgb(var(--background) / <alpha-value>)",

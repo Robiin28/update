@@ -1,8 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
-import { ExternalLink, Code, Play } from "lucide-react";
+import { createPortal } from "react-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Code, Play, ZoomIn, X } from "lucide-react";
 import { Project } from "../../lib/data";
 
 /* ── Color palettes per project ─────────────────────────── */
@@ -27,20 +28,24 @@ const shapes = [
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const [hovered, setHovered] = React.useState(false);
+  const [lightboxOpen, setLightboxOpen] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
   const palette = palettes[index % palettes.length];
   const shape   = shapes[index % shapes.length];
   const large   = index % 5 === 0;
+
+  React.useEffect(() => setMounted(true), []);
 
   return (
     <motion.article
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, margin: "-200px" }}
+      viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay: (index % 3) * 0.12, ease: [0.16, 1, 0.3, 1] }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
-      className={`relative cursor-pointer overflow-hidden rounded-2xl bg-white dark:bg-card/40 border border-black/5 dark:border-white/5 shadow-xl hover:shadow-2xl dark:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-500 hover:-translate-y-2 ${large ? "md:col-span-2 md:row-span-2" : ""}`}
+      className={`relative self-start flex flex-col cursor-pointer overflow-hidden rounded-2xl bg-white dark:bg-card/40 border border-black/5 dark:border-white/5 shadow-xl hover:shadow-2xl dark:shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-500 hover:-translate-y-2 ${large ? "md:col-span-2" : ""}`}
       style={{
         clipPath: shape,
         ...(hovered ? {
@@ -48,7 +53,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           borderColor: palette.border,
           boxShadow: `0 0 40px ${palette.accent}15, 0 20px 60px rgba(0,0,0,0.15)`,
         } : {}),
-        minHeight: large ? "420px" : "280px",
+        minHeight: large ? "340px" : "280px",
       }}
     >
       {/* Number watermark */}
@@ -65,18 +70,36 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       />
 
       {project.imageUrl && (
-        <div className={`relative w-full overflow-hidden ${large ? "h-48" : "h-36"}`}>
+        <div
+          className={`relative mx-5 mt-5 rounded-xl overflow-hidden border border-black/5 dark:border-white/10 cursor-zoom-in ${large ? "h-40" : "h-28"}`}
+          onClick={(e) => {
+            e.stopPropagation();
+            setLightboxOpen(true);
+          }}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={project.imageUrl}
             alt={project.title}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-500"
-            style={{ transform: hovered ? "scale(1.05)" : "scale(1)" }}
+            style={{
+              objectPosition: project.imageFocus || "top",
+              transform: hovered ? "scale(1.05)" : "scale(1)",
+            }}
           />
+          <div
+            className="absolute inset-0 flex items-center justify-center transition-colors duration-300"
+            style={{ background: hovered ? "rgba(0,0,0,0.35)" : "rgba(0,0,0,0)" }}
+          >
+            <ZoomIn
+              className="w-5 h-5 text-white drop-shadow transition-opacity duration-300"
+              style={{ opacity: hovered ? 1 : 0 }}
+            />
+          </div>
         </div>
       )}
 
-      <div className="relative z-10 p-7 h-full flex flex-col">
+      <div className="relative z-10 p-7 flex flex-col">
         {/* Category */}
         <span className="text-[10px] font-bold tracking-[0.2em] uppercase mb-5"
               style={{ color: palette.text }}>
@@ -99,18 +122,14 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </motion.p>
 
         {/* Tech tags */}
-        <motion.div
-          animate={{ opacity: hovered ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="flex flex-wrap gap-2 my-4"
-        >
-          {project.technologies.slice(0, 4).map((t) => (
+        <div className="flex flex-wrap gap-2 my-4">
+          {project.technologies.map((t) => (
             <span key={t} className="text-xs px-2.5 py-1 rounded-lg font-medium"
                   style={{ background: palette.bg, color: palette.text, border: `1px solid ${palette.border}` }}>
               {t}
             </span>
           ))}
-        </motion.div>
+        </div>
 
         {/* Actions */}
         <div className="flex items-center gap-3 mt-auto">
@@ -132,6 +151,44 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           )}
         </div>
       </div>
+
+      {mounted && project.imageUrl && createPortal(
+        <AnimatePresence>
+          {lightboxOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[200] flex items-center justify-center bg-black/75 backdrop-blur-sm p-8 sm:p-16"
+              onClick={() => setLightboxOpen(false)}
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="relative max-w-3xl w-full"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
+                />
+                <button
+                  onClick={() => setLightboxOpen(false)}
+                  aria-label="Close preview"
+                  className="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full bg-white text-black shadow-lg hover:scale-105 transition-transform"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </motion.article>
   );
 }

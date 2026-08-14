@@ -8,7 +8,7 @@ import Image from "next/image";
  * GLOBAL SENTINEL (V2)
  * High-end persistent portrait with guaranteed cross-page movement.
  */
-export function GlobalSentinel() {
+export function GlobalSentinel({ portraitUrl }: { portraitUrl: string }) {
   const { scrollY } = useScroll();
 
   // Scroll mapping for unified path
@@ -21,10 +21,8 @@ export function GlobalSentinel() {
   return (
     <div className="fixed inset-0 z-[9999] pointer-events-none overflow-hidden">
       <motion.div
-        className="absolute bottom-0 right-[-50px] md:right-0 pointer-events-none hidden md:block"
+        className="absolute bottom-0 right-[-20px] sm:right-[-50px] md:right-0 pointer-events-none w-[55vw] h-[60vh] md:w-[40vw] md:h-screen"
         style={{
-          width: "40vw",
-          height: "100vh",
           x,
           y,
           scale,
@@ -34,23 +32,22 @@ export function GlobalSentinel() {
         }}
       >
         <div className="relative w-full h-full">
-          {/* Using a professional standing portrait placeholder */}
           <Image
-            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop"
-            alt="Standing Portrait"
+            src={portraitUrl}
+            alt="Robel Hailu"
             fill
             className="object-contain object-bottom drop-shadow-[0_20px_50px_rgba(222,107,36,0.3)]"
             priority
           />
 
           {/* Orbiting Telemetry */}
-          <div className="absolute top-1/3 left-10 flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-black/60 backdrop-blur-2xl">
+          <div className="hidden sm:flex absolute top-1/3 left-10 items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-black/60 backdrop-blur-2xl">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-[10px] font-mono text-white/90 tracking-[0.2em] uppercase font-bold text-shadow-md">ROB.DEV.SYS</span>
           </div>
 
-          <motion.div 
-            className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-[#DE6B24]"
+          <motion.div
+            className="hidden sm:block absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-[#DE6B24]"
             animate={{ x: [0, 30, 0], y: [0, -60, 0], opacity: [0.4, 1, 0.4] }}
             transition={{ duration: 4, repeat: Infinity }}
           >

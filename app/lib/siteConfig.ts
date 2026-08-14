@@ -5,7 +5,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   ogImage: "/og.jpg",
   links: {
-    github:   "https://github.com/robiiihailuu",
+    github:   "https://github.com/Robiin28",
     linkedin: "https://linkedin.com/in/mr-robel-hailu-854143239/",
     twitter:  "",
     email:    "mailto:robiiihailuu@gmail.com",

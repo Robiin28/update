@@ -3,6 +3,7 @@ import experiencesData from '../data/experiences.json';
 import blogData from '../data/blog.json';
 import skillsData from '../data/skills.json';
 import educationData from '../data/education.json';
+import profileData from '../data/profile.json';
 
 export interface Project {
   id: string;
@@ -12,6 +13,7 @@ export interface Project {
   category: string;
   technologies: string[];
   imageUrl: string;
+  imageFocus?: string;
   liveUrl?: string;
   githubUrl?: string;
   featured: boolean;
@@ -83,7 +85,13 @@ export interface Background {
   languages: LanguageEntry[];
 }
 
-const isDatabaseMode = process.env.NEXT_PUBLIC_DATABASE_MODE !== 'json';
+export interface Profile {
+  yearsExperience: number;
+  aboutPortraitUrl: string;
+  sentinelPortraitUrl: string;
+}
+
+const isDatabaseMode = process.env.NEXT_PUBLIC_DATABASE_MODE === 'database';
 
 export async function getProjects(): Promise<Project[]> {
   if (isDatabaseMode) {
@@ -126,4 +134,11 @@ export async function getBackground(): Promise<Background> {
     return { education: [], volunteering: [], languages: [] };
   }
   return educationData as Background;
+}
+
+export async function getProfile(): Promise<Profile> {
+  if (isDatabaseMode) {
+    return { yearsExperience: 0, aboutPortraitUrl: "", sentinelPortraitUrl: "" };
+  }
+  return profileData as Profile;
 }

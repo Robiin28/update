@@ -9,11 +9,15 @@ const EXT_BY_MIME: Record<string, string> = {
   "image/svg+xml": "svg",
 };
 
+const SAFE_FOLDER = /^[a-z0-9-]+$/;
+
 export async function POST(request: NextRequest) {
   const body = await request.json().catch(() => null);
   if (!body || typeof body.slug !== "string" || typeof body.dataUrl !== "string") {
     return NextResponse.json({ error: "Expected { slug, dataUrl }" }, { status: 400 });
   }
+
+  const folder = typeof body.folder === "string" && SAFE_FOLDER.test(body.folder) ? body.folder : "projects";
 
   const match = /^data:(image\/[a-zA-Z0-9.+-]+);base64,(.+)$/.exec(body.dataUrl);
   if (!match) {
@@ -27,11 +31,11 @@ export async function POST(request: NextRequest) {
 
   const safeSlug = body.slug.toLowerCase().replace(/[^a-z0-9-]/g, "-").slice(0, 60) || "project";
   const filename = `${safeSlug}-${Date.now()}.${ext}`;
-  const repoPath = `public/projects/${filename}`;
+  const repoPath = `public/${folder}/${filename}`;
 
   try {
     await putBinaryFile(repoPath, base64, `chore(admin): upload image for ${safeSlug}`);
-    return NextResponse.json({ path: `/projects/${filename}` });
+    return NextResponse.json({ path: `/${folder}/${filename}` });
   } catch (err) {
     return NextResponse.json({ error: (err as Error).message }, { status: 500 });
   }
