@@ -9,10 +9,16 @@
     "logoUrl": "https://logo.clearbit.com/kifiya.com",
     "logoFallback": "KF",
     "accentColor": "#DE6B24",
-    "description": "Sole developer on Kifiya's production loan platform since the lead developer's departure, owning backend services, frontend, and service architecture end to end while continuing senior platform administration duties on the MCP team.",
+    "description": "developer on Kifiya's production loan platform since the lead developer's departure, owning backend services, frontend, and service architecture end to end while continuing senior platform administration duties on the MCP team.",
     "technologies": [
-      "Go (Golang)", "Node.js", "Kafka", "Redis", "PostgreSQL",
-      "Microservices Architecture", "Event-Driven Systems", "Next.js"
+      "Go (Golang)",
+      "Node.js",
+      "Kafka",
+      "Redis",
+      "PostgreSQL",
+      "Microservices Architecture",
+      "Event-Driven Systems",
+      "Next.js"
     ],
     "achievements": [
       "Sole developer on the production SAFFEE loan platform, owning backend services, frontend, and service architecture end to end",
@@ -34,8 +40,14 @@
     "accentColor": "#EEAF30",
     "description": "Own production operations for a fintech platform enabling over 12B ETB in loan disbursement across banks, NGOs, and financial institutions, acting as both developer and system interpreter for client and stakeholder requirements.",
     "technologies": [
-      "Data Analysis","Platform Administration","Partner Associatiation", "System Monitoring", "Incident Handling",
-      "PostgreSQL", "Data Integrity", "Stakeholder Management"
+      "Data Analysis",
+      "Platform Administration",
+      "Partner Associatiation",
+      "System Monitoring",
+      "Incident Handling",
+      "PostgreSQL",
+      "Data Integrity",
+      "Stakeholder Management"
     ],
     "achievements": [
       "Own production platform operations including system monitoring, incident handling, database operations, and continuous availability of financial workflows",
@@ -57,8 +69,14 @@
     "accentColor": "#2D6CDF",
     "description": "Progressed from junior to senior full stack engineer over three years, building and maintaining ERP modules and production web applications remotely alongside university studies.",
     "technologies": [
-      "Requirement Elicitation","Laravel (PHP)", "Filament Admin Panel", "Node.js", "MySQL",
-      "PostgreSQL", "REST APIs", "Database Design"
+      "Requirement Elicitation",
+      "Laravel (PHP)",
+      "Filament Admin Panel",
+      "Node.js",
+      "MySQL",
+      "PostgreSQL",
+      "REST APIs",
+      "Database Design"
     ],
     "achievements": [
       "Joined as a junior full stack engineer and progressed to senior-level responsibilities through continuous delivery across production projects",
@@ -78,8 +96,11 @@
     "accentColor": "#4E8E89",
     "description": "Bridged development teams and factory stakeholders, translating real operational workflows into structured ERP requirements and clean, integration-ready data.",
     "technologies": [
-      "Data Analysis", "Data Cleaning", "Requirement Elicitation",
-      "ERP Implementation", "Excel"
+      "Data Analysis",
+      "Data Cleaning",
+      "Requirement Elicitation",
+      "ERP Implementation",
+      "Excel"
     ],
     "achievements": [
       "Bridged development teams, stakeholders, and consultancy representatives to translate business processes into structured technical specifications for developers",
@@ -98,7 +119,12 @@
     "logoFallback": "EL",
     "accentColor": "#B36A34",
     "description": "Contributed to a task management system across frontend and backend as part of an Agile engineering team, building foundational practices in clean code and collaborative delivery.",
-    "technologies": ["Agile Delivery", "Version Control", "Frontend", "Backend"],
+    "technologies": [
+      "Agile Delivery",
+      "Version Control",
+      "Frontend",
+      "Backend"
+    ],
     "achievements": [
       "Contributed to the development of a task management system, working across frontend and backend alongside the engineering team",
       "Worked within Agile delivery including sprint planning, standups, and code reviews, building practical experience in clean code, version control, and collaborative development"
