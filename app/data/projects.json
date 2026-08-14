@@ -107,7 +107,24 @@
     "imageUrl": "",
     "featured": true,
     "dateCompleted": "2024-09-01",
-    "order": 6
+    "order": 7
+  },
+  {
+    "id": "74fae812-3273-4847-9065-dcbb6b9ab2e6",
+    "title": "travel agency system",
+    "slug": "travel agency",
+    "description": "Meli Private Employment Agency connects Ethiopian talent with global opportunities through ethical, compliant, and transparent recruitment practices. ",
+    "category": "web",
+    "technologies": [
+      "astro",
+      "typescript"
+    ],
+    "imageUrl": "",
+    "featured": true,
+    "dateCompleted": "2026-08-14",
+    "order": 6,
+    "githubUrl": "",
+    "liveUrl": "https://meliagencyet.com/"
   },
   {
     "id": "7",
@@ -123,6 +140,6 @@
     "imageUrl": "",
     "featured": true,
     "dateCompleted": "2025-03-01",
-    "order": 7
+    "order": 8
   }
 ]
