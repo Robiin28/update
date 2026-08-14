@@ -113,6 +113,32 @@ export function ProfileEditor() {
         </Field>
       </div>
 
+      <div className="glass-card rounded-2xl p-5 space-y-3">
+        <Field label="Who I Am (bio — separate paragraphs with a blank line)">
+          <textarea
+            className="input-glass min-h-[160px]"
+            value={profile.bio}
+            onChange={(e) => update({ bio: e.target.value })}
+          />
+        </Field>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Field label="Location">
+            <input
+              className="input-glass"
+              value={profile.location}
+              onChange={(e) => update({ location: e.target.value })}
+            />
+          </Field>
+          <Field label="Availability Badge Text">
+            <input
+              className="input-glass"
+              value={profile.availabilityText}
+              onChange={(e) => update({ availabilityText: e.target.value })}
+            />
+          </Field>
+        </div>
+      </div>
+
       <PortraitField
         label="About Section Portrait"
         value={profile.aboutPortraitUrl}

@@ -31,7 +31,14 @@ export default async function Home() {
         <Header />
         <main className="flex-grow">
           <Hero yearsExperience={profile.yearsExperience} resumeUrl={profile.resumeUrl} />
-          <About experiences={experiences} skills={skillsData.categories} portraitUrl={profile.aboutPortraitUrl} />
+          <About
+            experiences={experiences}
+            skills={skillsData.categories}
+            portraitUrl={profile.aboutPortraitUrl}
+            bio={profile.bio}
+            location={profile.location}
+            availabilityText={profile.availabilityText}
+          />
           <Background data={background} />
           <MonitorHub />
           <DataLab />

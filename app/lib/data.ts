@@ -90,6 +90,9 @@ export interface Profile {
   aboutPortraitUrl: string;
   sentinelPortraitUrl: string;
   resumeUrl: string;
+  bio: string;
+  location: string;
+  availabilityText: string;
 }
 
 const isDatabaseMode = process.env.NEXT_PUBLIC_DATABASE_MODE === 'database';
@@ -139,7 +142,15 @@ export async function getBackground(): Promise<Background> {
 
 export async function getProfile(): Promise<Profile> {
   if (isDatabaseMode) {
-    return { yearsExperience: 0, aboutPortraitUrl: "", sentinelPortraitUrl: "", resumeUrl: "" };
+    return {
+      yearsExperience: 0,
+      aboutPortraitUrl: "",
+      sentinelPortraitUrl: "",
+      resumeUrl: "",
+      bio: "",
+      location: "",
+      availabilityText: "",
+    };
   }
   return profileData as Profile;
 }

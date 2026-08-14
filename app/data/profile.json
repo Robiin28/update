@@ -2,5 +2,8 @@
   "yearsExperience": 4,
   "aboutPortraitUrl": "/profile/aboutportraiturl-1786714441820.png",
   "sentinelPortraitUrl": "/portrait.jpg",
-  "resumeUrl": "/resume.pdf"
+  "resumeUrl": "/resume.pdf",
+  "bio": "I'm a backend and platform engineer who owns problems end to end — from system design to production operations. I currently build and run Kifiya's loan platform solo, working across Go, Node.js, Kafka, and PostgreSQL in event-driven microservice architectures.\n\nI use AI-assisted, agentic engineering workflows for delivery speed while keeping architecture and correctness decisions my own — and I build personal projects on the side, from RAG experiments to a recommendation-driven news feed, to keep deepening my systems thinking.",
+  "location": "Addis Ababa",
+  "availabilityText": "Open to select opportunities"
 }

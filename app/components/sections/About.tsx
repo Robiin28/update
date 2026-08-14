@@ -298,11 +298,18 @@ export function About({
   experiences,
   skills,
   portraitUrl,
+  bio,
+  location,
+  availabilityText,
 }: {
   experiences: Experience[];
   skills: SkillCategory[];
   portraitUrl: string;
+  bio: string;
+  location: string;
+  availabilityText: string;
 }) {
+  const bioParagraphs = bio.split("\n\n").filter(Boolean);
   return (
     <section id="about" className="py-32 relative overflow-hidden">
       {/* Background */}
@@ -357,26 +364,17 @@ export function About({
                   Who I Am
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed text-xs md:text-sm">
-                  <p>
-                    I'm a backend and platform engineer who owns problems end to end —
-                    from system design to production operations. I currently build and
-                    run Kifiya's loan platform solo, working across Go, Node.js, Kafka,
-                    and PostgreSQL in event-driven microservice architectures.
-                  </p>
-                  <p>
-                    I use AI-assisted, agentic engineering workflows for delivery speed
-                    while keeping architecture and correctness decisions my own — and I
-                    build personal projects on the side, from RAG experiments to a
-                    recommendation-driven news feed, to keep deepening my systems thinking.
-                  </p>
+                  {bioParagraphs.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
                 </div>
                 <div className="mt-6 pt-6 border-t border-border flex flex-wrap items-center gap-3">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4 text-primary" />
-                    <span className="text-xs md:text-sm text-muted-foreground">Addis Ababa</span>
+                    <span className="text-xs md:text-sm text-muted-foreground">{location}</span>
                   </div>
                   <span className="ml-auto text-[10px] px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
-                    Open to select opportunities
+                    {availabilityText}
                   </span>
                 </div>
               </div>
