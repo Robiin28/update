@@ -30,7 +30,7 @@
     "description": "Personal project: an AI-assisted resume/CV builder that generates tailored, structured resumes — built to explore practical LLM-integrated tooling outside of client work.",
     "category": "AI/ML",
     "technologies": ["Next.js", "TypeScript", "AI/LLM Integration"],
-    "imageUrl": "",
+    "imageUrl": "/projects/ai-cv-generator.svg",
     "featured": true,
     "dateCompleted": "2026-01-01",
     "order": 3

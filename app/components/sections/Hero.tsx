@@ -231,7 +231,16 @@ export function Hero() {
               <MagneticButton onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })} className="text-white py-3.5 md:py-4 px-6 md:px-10 text-sm md:text-base">
                 Explore Core System →
               </MagneticButton>
-              <MagneticButton variant="ghost" className="text-white/60 py-3.5 md:py-4 px-6 md:px-10 text-sm md:text-base border-white/10">
+              <MagneticButton
+                variant="ghost"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/resume.pdf";
+                  link.download = "Robel-Hailu-Resume.pdf";
+                  link.click();
+                }}
+                className="text-white/60 py-3.5 md:py-4 px-6 md:px-10 text-sm md:text-base border-white/10"
+              >
                 Download CV
               </MagneticButton>
             </motion.div>

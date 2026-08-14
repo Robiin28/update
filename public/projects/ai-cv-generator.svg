@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1A1615"/>
+      <stop offset="100%" stop-color="#2A211D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DE6B24"/>
+      <stop offset="100%" stop-color="#EEAF30"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- Document card -->
+  <rect x="220" y="70" width="360" height="460" rx="16" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+  <!-- Header bar -->
+  <rect x="252" y="102" width="296" height="14" rx="7" fill="url(#accent)"/>
+  <rect x="252" y="128" width="180" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.25"/>
+
+  <!-- Avatar -->
+  <circle cx="288" cy="200" r="28" fill="#DE6B24" fill-opacity="0.25" stroke="#DE6B24" stroke-opacity="0.6"/>
+  <circle cx="288" cy="192" r="10" fill="#EEAF30" fill-opacity="0.8"/>
+  <path d="M266 216c0-14 10-22 22-22s22 8 22 22" fill="#EEAF30" fill-opacity="0.5"/>
+
+  <!-- Name / role lines -->
+  <rect x="332" y="182" width="150" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.3"/>
+  <rect x="332" y="200" width="110" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.15"/>
+
+  <!-- Section: experience -->
+  <rect x="252" y="252" width="90" height="8" rx="4" fill="#4E8E89"/>
+  <rect x="252" y="270" width="296" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.12"/>
+  <rect x="252" y="284" width="270" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.12"/>
+  <rect x="252" y="298" width="230" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.12"/>
+
+  <!-- Section: skills as chips -->
+  <rect x="252" y="330" width="70" height="8" rx="4" fill="#C05D5D"/>
+  <rect x="252" y="348" width="64" height="20" rx="10" fill="#DE6B24" fill-opacity="0.18" stroke="#DE6B24" stroke-opacity="0.4"/>
+  <rect x="324" y="348" width="80" height="20" rx="10" fill="#EEAF30" fill-opacity="0.18" stroke="#EEAF30" stroke-opacity="0.4"/>
+  <rect x="412" y="348" width="56" height="20" rx="10" fill="#4E8E89" fill-opacity="0.18" stroke="#4E8E89" stroke-opacity="0.4"/>
+  <rect x="252" y="378" width="90" height="20" rx="10" fill="#C05D5D" fill-opacity="0.18" stroke="#C05D5D" stroke-opacity="0.4"/>
+  <rect x="350" y="378" width="60" height="20" rx="10" fill="#DE6B24" fill-opacity="0.18" stroke="#DE6B24" stroke-opacity="0.4"/>
+
+  <!-- Section: education -->
+  <rect x="252" y="424" width="80" height="8" rx="4" fill="#EEAF30"/>
+  <rect x="252" y="442" width="296" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.12"/>
+  <rect x="252" y="456" width="240" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.12"/>
+
+  <!-- Floating "AI generating" cursor / sparkle accent -->
+  <g opacity="0.9">
+    <circle cx="560" cy="120" r="34" fill="#DE6B24" fill-opacity="0.15"/>
+    <path d="M560 100 l6 16 16 6 -16 6 -6 16 -6 -16 -16 -6 16 -6z" fill="#EEAF30"/>
+  </g>
+</svg>

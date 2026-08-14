@@ -64,6 +64,18 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         style={{ background: `linear-gradient(90deg, transparent, ${palette.accent}, transparent)` }}
       />
 
+      {project.imageUrl && (
+        <div className={`relative w-full overflow-hidden ${large ? "h-48" : "h-36"}`}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500"
+            style={{ transform: hovered ? "scale(1.05)" : "scale(1)" }}
+          />
+        </div>
+      )}
+
       <div className="relative z-10 p-7 h-full flex flex-col">
         {/* Category */}
         <span className="text-[10px] font-bold tracking-[0.2em] uppercase mb-5"

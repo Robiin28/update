@@ -4,7 +4,7 @@
     "company": "Kifiya Financial Technology",
     "role": "Mid-Level Backend Developer, IDD Team",
     "location": "Addis Ababa, Ethiopia",
-    "startDate": "May 2026",
+    "startDate": "March 2026",
     "endDate": "Present",
     "logoUrl": "https://logo.clearbit.com/kifiya.com",
     "logoFallback": "KF",
@@ -34,7 +34,7 @@
     "accentColor": "#EEAF30",
     "description": "Own production operations for a fintech platform enabling over 11B ETB in loan disbursement across banks, NGOs, and financial institutions, acting as both developer and system interpreter for client and stakeholder requirements.",
     "technologies": [
-      "Platform Administration", "System Monitoring", "Incident Handling",
+      "Data Analysis","Platform Administration","Partner Associatiation", "System Monitoring", "Incident Handling",
       "PostgreSQL", "Data Integrity", "Stakeholder Management"
     ],
     "achievements": [
@@ -57,7 +57,7 @@
     "accentColor": "#2D6CDF",
     "description": "Progressed from junior to senior full stack engineer over three years, building and maintaining ERP modules and production web applications remotely alongside university studies.",
     "technologies": [
-      "Laravel (PHP)", "Filament Admin Panel", "Node.js", "MySQL",
+      "Requirement Elicitation","Laravel (PHP)", "Filament Admin Panel", "Node.js", "MySQL",
       "PostgreSQL", "REST APIs", "Database Design"
     ],
     "achievements": [
