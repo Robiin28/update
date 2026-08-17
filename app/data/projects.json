@@ -20,13 +20,13 @@
     "imageUrl": "/projects/fintech-loan-platform.jpg",
     "imageFocus": "center 34%",
     "featured": true,
-    "dateCompleted": "2026-05-02",
+    "dateCompleted": "2026-05-03",
     "order": 1
   },
   {
     "id": "2",
     "title": "ERP System: HR, Finance & Inventory Modules",
-    "slug": "erp-hr-finance-inventory",
+    "slug": "erp-HR-finance-inventory",
     "description": "Designed and delivered core ERP modules covering HR, finance, and inventory operations, including backend logic, database structures, and API integrations for workflow automation — including integration with external systems such as POS.",
     "category": "ERP",
     "technologies": [
