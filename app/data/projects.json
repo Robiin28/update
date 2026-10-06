@@ -17,7 +17,7 @@
       "CI/CD",
       "REST APIs"
     ],
-    "imageUrl": "/projects/fintech-loan-platform.jpg",
+    "imageUrl": "/projects/fintech-loan-platform-1791286682689.svg",
     "imageFocus": "center 34%",
     "featured": true,
     "dateCompleted": "2026-05-03",
@@ -26,7 +26,7 @@
   {
     "id": "2",
     "title": "ERP System: HR, Finance & Inventory Modules",
-    "slug": "erp-HR-finance-inventory",
+    "slug": "ERP-HR-finance-inventory",
     "description": "Designed and delivered core ERP modules covering HR, finance, and inventory operations, including backend logic, database structures, and API integrations for workflow automation — including integration with external systems such as POS.",
     "category": "ERP",
     "technologies": [
@@ -110,7 +110,7 @@
     "featured": true,
     "dateCompleted": "2024-09-01",
     "order": 7,
-    "githubUrl": "https://github.com/Robiin28/loyal-brand"
+    "githubUrl": ""
   },
   {
     "id": "74fae812-3273-4847-9065-dcbb6b9ab2e6",
