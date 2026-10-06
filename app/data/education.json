@@ -1,7 +1,7 @@
 {
   "education": [
     {
-      "degree": "MSc, Data Analysis",
+      "degree": "MSc, AI",
       "institution": "Addis Ababa University",
       "period": "Jan 2026 – 2029 (ongoing)"
     },
@@ -20,7 +20,13 @@
     }
   ],
   "languages": [
-    { "name": "Amharic", "level": "Native" },
-    { "name": "English", "level": "Professional working proficiency" }
+    {
+      "name": "Amharic",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Professional working proficiency"
+    }
   ]
 }
