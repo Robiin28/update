@@ -2,14 +2,14 @@
   {
     "id": "1",
     "company": "Kifiya Financial Technology",
-    "role": "Mid-Level Backend Developer, IDD Team",
+    "role": "FullStack Developer ( loan platform )",
     "location": "Addis Ababa, Ethiopia",
     "startDate": "March 2026",
     "endDate": "Present",
     "logoUrl": "https://logo.clearbit.com/kifiya.com",
     "logoFallback": "KF",
     "accentColor": "#DE6B24",
-    "description": "Solo developer on Kifiya's production loan platform, owning backend services, frontend, and service architecture end to end while continuing senior platform administration duties on the MCP team.",
+    "description": "Solo developer on Kifiya's production loan participant management platform, owning backend services, frontend, mobile app and service architecture end to end while continuing senior platform administration duties on the MCP team.",
     "technologies": [
       "Go (Golang)",
       "Node.js",
@@ -21,7 +21,7 @@
       "Next.js"
     ],
     "achievements": [
-      "Sole developer on the production SAFFEE loan platform, owning backend services, frontend, and service architecture end to end",
+      "Sole developer on the production SAFFEE loan platform (PRM), owning backend services, frontend, and service architecture end to end",
       "Designed and built microservices including an activity log service and a notification service, defining service boundaries, event flow, and integration with core platform services",
       "Work across Go, Node.js, Kafka, Redis, and PostgreSQL in a distributed, event-driven microservice architecture",
       "Deliver new-version development and platform enhancements while maintaining the running system, holding direct responsibility for uptime, data integrity, and release quality"
