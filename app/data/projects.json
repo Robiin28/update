@@ -26,7 +26,7 @@
   {
     "id": "2",
     "title": "ERP System: HR, Finance & Inventory Modules",
-    "slug": "ERP-HR-finance-inventory",
+    "slug": "ERP-HR-finance-inventorys",
     "description": "Designed and delivered core ERP modules covering HR, finance, and inventory operations, including backend logic, database structures, and API integrations for workflow automation — including integration with external systems such as POS.",
     "category": "ERP",
     "technologies": [
